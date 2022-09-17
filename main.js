@@ -132,6 +132,7 @@ function editTask(taskId, taskName) {
   taskinput.focus();
 }
 document.querySelector(".clear-all-btn").addEventListener("click", () => {
+  showTime()
   todos.splice(0, todos.length);
   localStorage.setItem("todo-list", JSON.stringify(todos));
   showTodos("all");
