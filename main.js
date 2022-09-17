@@ -29,7 +29,7 @@ const todos = JSON.parse(localStorage.getItem("todo-list") || "[]");
 console.log(todos);
 let UpdateId;
 let isUpdate = false;
-showTime();
+
 
 filter.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -175,4 +175,4 @@ function showTime() {
     showTime()
    },1000)
 }
-
+showTime();
