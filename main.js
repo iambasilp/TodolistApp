@@ -29,6 +29,7 @@ const todos = JSON.parse(localStorage.getItem("todo-list") || "[]");
 console.log(todos);
 let UpdateId;
 let isUpdate = false;
+showTime();
 
 filter.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -75,7 +76,7 @@ function showTodos(filter) {
   <spna><i class="fa-solid fa-clipboard-list"></i></spna>
   <span class="current-time ">Today time is</span>
   <span class="no-task-message">No task here yet</span>`;
-   showTime()
+ 
 }
 showTodos("all");
 
@@ -132,7 +133,6 @@ function editTask(taskId, taskName) {
   taskinput.focus();
 }
 document.querySelector(".clear-all-btn").addEventListener("click", () => {
-  showTime()
   todos.splice(0, todos.length);
   localStorage.setItem("todo-list", JSON.stringify(todos));
   showTodos("all");
@@ -175,4 +175,4 @@ function showTime() {
     showTime()
    },1000)
 }
-showTime();
+
