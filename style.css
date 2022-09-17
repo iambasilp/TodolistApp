@@ -175,8 +175,8 @@ body {
     text-decoration: line-through;
 }
 .menu{
-    height: 50px;
-    width: 65px;
+    height: 40px;
+    width: 60px;
     background: white;
     position: absolute;
     right: 0;
@@ -190,7 +190,7 @@ body {
     white-space: nowrap;
 }
 .edit-btn,.delete-btn{
-  font-size: 8px;
+  font-size: 10px;
   word-spacing: 3px;
   cursor: pointer;
   color: grey;
