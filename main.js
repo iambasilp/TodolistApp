@@ -34,7 +34,7 @@ filter.forEach((btn) => {
   btn.addEventListener("click", () => {
     document.querySelector("span.active").classList.remove("active");
     btn.classList.add("active");
-    showTodos(btn.id)
+    showTodos(btn.id);
   });
 });
 
@@ -42,10 +42,9 @@ function showTodos(filter) {
   document.querySelectorAll(".task-list").forEach((todo) => {
     todo.remove();
   });
-  let liTag = '';
+  let liTag = "";
   todos.forEach((todo, id) => {
-
-    let isCompleted = todo.status == "completed"? "checked": '';
+    let isCompleted = todo.status == "completed" ? "checked" : "";
     if (filter == todo.status || filter == "all") {
       liTag += `<div class="task-list">
       <label for="${id}">
@@ -71,19 +70,21 @@ function showTodos(filter) {
     }
   });
   document.querySelector(".task-list-container").innerHTML =
-    liTag || `
+    liTag ||
+    `
   <spna><i class="fa-solid fa-clipboard-list"></i></spna>
+  <span class="current-time ">Today time is</span>
   <span class="no-task-message">No task here yet</span>`;
 }
-showTodos('all');
+showTodos("all");
 
 taskaddbtn.addEventListener("click", (e) => {
-  if (taskinput.value != '') {
+  if (taskinput.value != "") {
     var divlist = document.querySelectorAll(".task-list").length;
     document.querySelector(".number-of-tasks").innerHTML = divlist + " Tasks";
     let userTask = taskinput.value;
     if (!isUpdate) {
-      let taskinfo = {name:userTask,status:"Pending"};
+      let taskinfo = { name: userTask, status: "Pending" };
       todos.push(taskinfo);
     } else {
       isUpdate = false;
@@ -107,13 +108,13 @@ function taskcomplete(elem) {
   }
   localStorage.setItem("todo-list", JSON.stringify(todos));
 }
-function showMenu(selectelem){
-  selectelem.parentElement.lastElementChild.classList.add('show');
-  document.addEventListener('click',(e)=>{
-    if(e.target.tagName != 'I' || e.target != selectelem){
-      selectelem.parentElement.lastElementChild.classList.remove('show')
+function showMenu(selectelem) {
+  selectelem.parentElement.lastElementChild.classList.add("show");
+  document.addEventListener("click", (e) => {
+    if (e.target.tagName != "I" || e.target != selectelem) {
+      selectelem.parentElement.lastElementChild.classList.remove("show");
     }
-  })
+  });
 }
 
 function deleteTask(deleteId) {
@@ -129,12 +130,47 @@ function editTask(taskId, taskName) {
   taskinput.value = taskName;
   taskinput.focus();
 }
-document.querySelector('.clear-all-btn').addEventListener('click',()=>{
-  todos.splice(0,todos.length);
-  localStorage.setItem('todo-list',JSON.stringify(todos))
-  showTodos('all')
-  var divlist = document.querySelectorAll('.task-list').length
-  document.querySelector('.number-of-tasks').innerHTML = divlist + " Tasks"
-})
-var divlist = document.querySelectorAll('.task-list').length
-document.querySelector('.number-of-tasks').innerHTML = divlist + " Tasks"
+document.querySelector(".clear-all-btn").addEventListener("click", () => {
+  todos.splice(0, todos.length);
+  localStorage.setItem("todo-list", JSON.stringify(todos));
+  showTodos("all");
+  var divlist = document.querySelectorAll(".task-list").length;
+  document.querySelector(".number-of-tasks").innerHTML = divlist + " Tasks";
+});
+var divlist = document.querySelectorAll(".task-list").length;
+document.querySelector(".number-of-tasks").innerHTML = divlist + " Tasks";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///// extra timing function
+const CurrentTime = document.querySelector(".current-time");
+console.log(CurrentTime);
+
+
+function putzero(num){
+  return (num<10)?`0${num}`:num
+}
+function showTime() {
+   let cdate = new Date();
+   let hours = cdate.getHours()
+   let AmOrPm = (hours>12)?`Pm`:`Am`
+   let stringDate = `${putzero( hours%12)} : ${putzero(cdate.getMinutes()) } : ${ putzero(cdate.getSeconds()) } ${AmOrPm}`
+   CurrentTime.innerHTML = stringDate
+   setTimeout(function(){
+    showTime()
+   },1000)
+}
+showTime();
