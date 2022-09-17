@@ -1,0 +1,236 @@
+/* google font integration */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;0,700;1,300;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #fdfdfd;
+  /* background: black; */
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  height: 450px;
+  width: 320px;
+  background: white;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.date-container {
+  position: absolute;
+  width: 100%;
+  height: 64px;
+  background: rgba(211, 211, 211, 0.2);
+  /* background-color: red; */
+  border-bottom: 0.3px solid #c5c7df;
+}
+.date {
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: 6px;
+  margin-left: 20px;
+  color: #5d75e3;
+}
+.month {
+  font-size: 11px;
+  margin-top: 5px;
+  margin-left: 20px;
+  color: grey;
+  font-family: 300;
+}
+.number-of-tasks {
+  font-size: 13px;
+  position: absolute;
+  top: 17px;
+  right: 15px;
+  color: grey;
+  font-weight: 300;
+}
+.task-list-container {
+  width: 100%;
+  height: 298px;
+  position: absolute;
+  top: 100px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.input-div {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 64px;
+  background: rgba(211, 211, 211, 0.2);
+  border-top: 0.5px solid #c5c7d4;
+}
+.task-input {
+  all: unset;
+  width: 225px;
+  height: 38px;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  padding-left: 15px;
+  caret-color: #227bcb;
+  border: 0.5px solid #c5c7df;
+  color: grey;
+}
+.add-task-btn {
+  all: unset;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background: rgb(233, 78, 137);
+  color: white;
+  position: absolute;
+  top: 50%;
+  right: -12px;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.task-menu-container {
+  border-bottom: 0.5px solid #c5c7df;
+  height: 45px;
+  width: 100%;
+  position: absolute;
+  top: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(211, 211, 211, 0.2);
+}
+.task-menu-container > span {
+  color: grey;
+  font-size: 13px;
+  margin-left: 15px;
+  position: relative;
+  left: -38px;
+  cursor: pointer;
+}
+.clear-all-btn {
+  all: unset;
+  position: relative;
+  left: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 9px;
+  background: #5d75e3;
+  border-radius: 3px;
+  padding: 5px;
+  color: white;
+}
+.task-list {
+  height: 50px;
+  width: 100%;
+  position: relative;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-bottom: 0.5px solid #c5c7d4;
+}
+.checkbox {
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  transform: translate(-50%, -50%);
+}
+.task {
+  color: rgba(128, 128, 128, 0.9);
+  font-size: 12px;
+  position: relative;
+  top: 50%;
+  margin-left: 160px;
+  transform: translate(-50%, -50%);
+  width: 230px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 300;
+}
+::placeholder{
+    color: grey;
+    font-size: 15px;
+}
+.fa-ellipsis{
+    color: rgba(128, 128, 128, 0.9);
+    float: right;
+    margin-right: 15px;
+    font-size: 13px;
+}
+.checked{
+    text-decoration: line-through;
+}
+.menu{
+    height: 35px;
+    width: 50px;
+    background: white;
+    position: absolute;
+    right: 0;
+    top: -5px;
+    right: 15px;
+    border: 0.5 solid #c5c7d4;
+    transform: scale(0.25);
+    visibility: hidden;
+    opacity: 0;
+    transform-origin:100% 100%;
+    white-space: nowrap;
+}
+.edit-btn,.delete-btn{
+  font-size: 8px;
+  word-spacing: 3px;
+  cursor: pointer;
+  color: grey;
+  position: relative;
+  left: 5px;
+}
+.edit-btn{
+  position: absolute;
+  top: 3px;
+  right: 25px;
+}
+.delete-btn{
+  position: absolute;
+  top: 19px;
+  right: 15px;
+}
+.show{
+  transform: scale(1);
+  transition: transform 0.2s ease;
+  visibility: visible;
+  opacity: 1;
+  border: 1px solid #c5c7df;
+}
+.active{
+  text-decoration: underline;
+}
+.no-task-message{
+  position: absolute;
+  top: 54%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: rgba(128, 128, 128, 0.5);
+  white-space: nowrap;
+  font-size: 11px;
+}
+.fa-clipboard-list{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: rgba(128, 128, 128, 0.3);
+  font-size: 50px;
+}
