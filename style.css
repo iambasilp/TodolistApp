@@ -208,7 +208,7 @@ body {
   right: 15px;
 }
 .show{
-  transform: scale(1);
+  transform: scale(1.8);
   transition: transform 0.2s ease;
   visibility: visible;
   opacity: 1;
