@@ -73,7 +73,7 @@ function showTodos(filter) {
   document.querySelector(".task-list-container").innerHTML =
     liTag ||
     `
-  <spna><i class="fa-solid fa-clipboard-list"></i></spna>
+  <span><i class="fa-solid fa-clipboard-list"></i></span>
   <span class="current-time ">Today time is</span>
   <span class="no-task-message">No task here yet</span>`;
  
