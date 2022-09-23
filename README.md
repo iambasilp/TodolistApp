@@ -1,5 +1,5 @@
 ## .preview
-![To-Do List App](https://i.ibb.co/HHvydw7/Screenshot-80.png)
+![To-Do List App](https://i.ibb.co/pX203JD/Screenshot-82.png)
 
 ## .features
 - [x] Show tasks list
@@ -16,7 +16,7 @@
 - [x] Responsivity
 
 ## .tools
-- Icons: [Remix Icon](https://remixicon.com/)
+- Icons: [Font Awesome](https://fontawesome.com/icons)
 
 ## .contact
 - Email: [basilxg321@gmail.com](mailto:basilxg321@gmail.com)
