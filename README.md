@@ -4,16 +4,16 @@
 Todo List With Local Storage Using Html Css And| Javascript | Todo List Using Javascript
 
 
-## .preview
+## Preview
 
 ![To-Do List App](./images/nexttodo.png)
 
 
 ## 🛠 Skills to do
-Javascript, HTML, CSS...
+Javascript, HTML, CSS, Git...
 
 
-## .features
+## Features
 - [x] Show tasks list
 - [x] Add new task
 - [x] Complete task
@@ -44,7 +44,7 @@ Create a new branch and checkout to
 Go to the project directory
 
 ```bash
-  cd TodolistApp
+  cd Project_name
 ```
 
 
