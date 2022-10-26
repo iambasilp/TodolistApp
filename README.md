@@ -1,7 +1,7 @@
 
 # Javascript next Todo App
 
-This To Do List. Use CSS and JavaScript to create a "to-do list" to organize and prioritize your tasks. My To Do App
+Todo List With Local Storage Using Html Css And| Javascript | Todo List Using Javascript
 
 
 ## .preview
@@ -44,7 +44,7 @@ Create a new branch and checkout to
 Go to the project directory
 
 ```bash
-  cd TodoApp
+  cd TodolistApp
 ```
 
 
