@@ -6,7 +6,7 @@ This To Do List. Use CSS and JavaScript to create a "to-do list" to organize and
 
 ## .preview
 
-![To-Do List App](https://drive.google.com/file/d/1F6FlSqvKRlALRvTAEstxnjCwtqDk1HYh/view?usp=sharing)
+![To-Do List App](./images/nexttodo.png)
 
 
 ## 🛠 Skills to do
